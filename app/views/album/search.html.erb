@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Albums</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Album Name</th>
+		</tr>
+	</thead>
+
+
+
+	<tbody>
+		<% @albums.each do |album| %>
+			<tr>
+				<td><%= album.name %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+

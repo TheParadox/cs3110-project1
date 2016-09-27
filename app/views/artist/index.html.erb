@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Artists</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Artist Name</th>
+		</tr>
+	</thead>
+
+
+
+	<tbody>
+		<% @artists.each do |artist| %>
+			<tr>
+				<td><%= artist.name %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+

@@ -1,0 +1,16 @@
+<%= image_tag("soundwave.png", :alt => "Sound of music") %><br>
+
+<%= link_to("Home", root_path); %>
+<%= link_to("Manage", {:controller => 'manager', :action => 'index'}) %>
+<%= link_to("Search", {:controller => 'global', :action => 'select'}) %>
+<%= link_to("About Us",{:controller => 'global', :action => 'aboutus'}) %>
+<br>
+
+<% if !current_page?('/') && !current_page?({:controller => 'global', :action => 'select'}) && !current_page?({:controller => 'global', :action => 'aboutus'}) %>
+	<% alphabet = ('A' ... 'Z').to_a; %>
+
+	<% alphabet.each do |letter| %>
+		<a href='<%= letter %>'><%= letter %></a>
+	<% end %>
+<% end %>
+<br>
